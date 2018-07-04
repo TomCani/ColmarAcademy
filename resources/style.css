@@ -1,0 +1,567 @@
+/* Universal Stylings */
+html {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header / Nav Bar */
+header {
+  height: 4rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: black;
+}
+
+nav p {
+  font-weight: bold;
+}
+
+nav span {
+  color: lightgray;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: 2rem;
+  margin-left: 1.5rem;
+}
+
+nav ul {
+  margin-right: 1.5rem;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.mini-menu {
+  display: none;
+}
+
+/* Mobile Nav / Header */
+
+@media only screen and (max-width: 768px) {
+  nav, nav .logo {
+    display: none;
+  }
+
+  .mini-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+/* Main Banner */
+.main-banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-height: auto;
+  background-color: lightgray;
+}
+
+.main-image {
+  display: block;
+  position: relative;
+  max-width: 56%;
+  overflow: hidden;
+  padding: 2rem 2.5rem 2rem 1.5rem;
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  width: 30%;
+  height: auto;
+  margin: auto 0;
+  line-height: 1.1;
+}
+
+.heading h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #575757;
+  padding-bottom: 1.5rem;
+}
+
+.heading p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.heading .button {
+  position: relative;
+  display: block;
+  background-color: #575757;
+  color: white;
+  padding: .5rem 0;
+  text-align: center;
+  margin-top: 1.5rem;
+  max-width: 300px;
+}
+
+.heading .button:hover {
+  color: red;
+}
+
+/* Mobile Main Banner */
+
+@media only screen and (max-width: 768px) {
+  .main-banner {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main-image {
+    min-width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .heading {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .heading .button {
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+
+/* Information */
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-height: auto;
+}
+
+.main-information {
+  display: block;
+  position: relative;
+  max-width: 60%;
+  overflow: hidden;
+  padding: 2rem 1.5rem 0 1.5rem;
+  border-right: 1px solid lightgray;
+}
+
+.main-information img {
+  width: 100%;
+  height: auto;
+}
+
+.headline {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.headline h2 {
+  padding-top: 2rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.headline p {
+  padding-top: 1.5rem;
+}
+
+.headline span {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.other-information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 40%;
+  height: auto;
+}
+
+.mini-info:last-child {
+  background-color: lightgray;
+}
+
+.other-information .desktop-img {
+  display: flex;
+  width: 35%;
+  margin: 0;
+  float: left;
+  padding: 1rem;
+  height: auto;
+}
+
+.other-information.mini-info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.orientation {
+  border-bottom: 3px solid lightgray;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100%;
+  margin: auto 0;
+  padding: 3rem 0;
+}
+
+.text h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+.text p {
+  padding-bottom: .5rem;
+}
+
+.mobile-img {
+  display: none;
+}
+
+/* Mobile Information */
+
+@media only screen and (max-width: 768px) {
+  .main-information, .other-information .desktop-img {
+    display: none;
+  }
+
+  .other-information {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid lightgray;
+    min-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .other-information .text {
+    height: auto;
+    margin: 1rem;
+    display: block;
+  }
+
+  .text h4 {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+
+  .text p {
+    margin: .5rem 0;
+  }
+
+  .mini-info {
+    display: block;
+    overflow: hidden;
+    margin: auto 0;
+    border-bottom: 0px;
+  }
+
+  .mini-info:last-child {
+    background-color: white;
+  }
+
+  .other-information .mobile-img {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Courses */
+
+.courses {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  background-color: lightgray;
+}
+
+.courses h2 {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.course {
+  display: inline-block;
+  width: 25%;
+  height: 20rem;
+  overflow: hidden;
+  margin: 1rem;
+  background-color: white;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.description {
+  margin-left: 1rem;
+}
+
+.description h4 {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.description span {
+  margin: .5rem 0;
+}
+
+.description p {
+  line-height: 1.2;
+  margin: .5rem 0 1rem 0;
+}
+
+.mobile-courses {
+  display: none;
+}
+
+/* Mobile Courses */
+
+@media only screen and (max-width: 768px) {
+  .courses {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+  }
+
+  .flex-container {
+    display: none;
+  }
+
+  .mobile-courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eng, .art, .design, .data, .business, .marketing {
+    background-color: lightgray;
+    margin: 1rem 1rem .5rem 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem 0 1.5rem 1rem;
+  }
+}
+
+/* Thesis */
+
+.thesis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  max-height: auto;
+  border-bottom: 1px solid lightgray;
+}
+
+.title {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.main-thesis {
+  display: block;
+  position: relative;
+  width: 55%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
+.main-thesis video {
+  border: 3px solid lightgray;
+}
+
+.main-thesis span {
+  display: block;
+  position: relative;
+  padding-top: 1.5rem;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.main-thesis span p {
+  margin-top: .5rem;
+}
+
+.thesis h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.other-thesis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 40%;
+  height: auto;
+}
+
+.mini-thesis {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+.mini-thesis img {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+  float: left;
+}
+
+.mini-thesis-text {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 1.5;
+  margin: auto 0;
+}
+
+.mini-thesis:first-child {
+  background-color: lightgray;
+}
+
+/* Mobile Thesis */
+
+@media only screen and (max-width: 768px) {
+
+  .thesis {
+    border: none;
+  }
+
+  .thesis .title {
+    display: block;
+    text-align: center;
+  }
+
+  .main-thesis {
+    width: 100%;
+    padding: 0;
+  }
+
+  .main-thesis span {
+    display: none;
+  }
+
+  .main-thesis video {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .mini-thesis {
+    display: none;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: .75rem;
+}
+
+footer .links a {
+  align-items: flex-end;
+  padding: 0 .5rem;
+  color: black;
+}
+
+/* Mobile Footer */
+
+footer {
+  margin-top: 1.5rem;
+  padding: 1rem 1rem;
+}
+
+footer .links {
+  display: none;
+}
